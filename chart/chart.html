@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+<body>
+<canvas id="myChart" style="width:2000%;max-width:1600px"></canvas>
+
+<script>
+var xValues = [100,200,300,400,500,600,400,800,900,1000,2000,3000,1500,4000];
+var yValues = [6,8,10,7,12,14,17,11,14,16,18,14,15,7];
+
+new Chart("myChart", {
+  type: "line",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor: "rgba(0,0,255,0.1)",
+      data: yValues
+    }]
+  },
+  options: {
+    legend: {display: false},
+    scales: {
+      yAxes: [{ticks: {min: 6, max:16}}],
+      text: "My Wine Production 2021"
+    }
+  }
+});
+</script>
+
+
+
+</body>
+</html>
+
+
+
